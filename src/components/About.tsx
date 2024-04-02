@@ -23,6 +23,11 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: "justify",
       marginBottom: theme.spacing(5),
     },
+    h2text2: {
+      fontSize: "1.5rem",
+      lineHeight: "1.5rem",
+      textAlign: "justify",
+    },
     subtitle: {
       textAlign: "justify",
       fontWeight: 400,
@@ -67,7 +72,13 @@ const VisionSecond: React.FC = () => {
         About Us
       </Typography>
       <Grid item container>
-        <Grid item container xs={6} className={classes.rightBox}>
+        <Grid
+          item
+          container
+          xs={6}
+          justifyContent="space-between"
+          className={classes.rightBox}
+        >
           <Grid item className={classes.rightBoxTop}>
             <Typography variant="h2" className={classes.subtitle}>
               A joint research of FedEx & IIT Madras, India to make a
@@ -91,7 +102,7 @@ const VisionSecond: React.FC = () => {
               operations more efficient and sustainable by using
               state-of-the-art algorithms and technologies.
             </Typography>
-            <Typography className={classes.h2text}>
+            <Typography className={classes.h2text2}>
               Having built route optimizing, vehicle allocation, ride/space
               sharing, orienteering algorithms for the last 4 years, we have
               integrated all into a SaaS software service. We look to improve
