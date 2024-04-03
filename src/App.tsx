@@ -10,8 +10,6 @@ import Error from "./pages/Error";
 import Events from "./pages/Events";
 import AppPage from "./AppPage";
 
-import { Grid } from "@material-ui/core";
-
 const router = createBrowserRouter([
   {
     path: "/",

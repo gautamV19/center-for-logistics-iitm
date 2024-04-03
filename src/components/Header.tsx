@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   header: {
-    padding: "0 0.9375rem", // 15px converted to rem
+    padding: "0 1rem", // 15px converted to rem
     justifyContent: "space-between",
-    borderBottom: "0.09375rem solid #0B1215", // 1.5px converted to rem
+    borderBottom: "0.1rem solid #0B1215", // 1.5px converted to rem
   },
   logo: {
     height: "3.75rem", // 60px converted to rem
@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   navbarItems: {
     display: "flex",
     justifyContent: "space-between",
-    padding: "0.9375rem 0", // 15px converted to rem
+    padding: "1rem 0", // 15px converted to rem
   },
   navbarText: {
     color: "#0B1215",
@@ -27,18 +27,18 @@ const useStyles = makeStyles({
   },
 });
 
-const navbarItems = [
-  "Home",
-  "Vision",
-  "About",
-  "People",
-  "Events",
-  "Internships",
-];
-
 export default function Header() {
   const classes = useStyles();
   const navigate = useNavigate();
+
+  const navbarItems = [
+    "Home",
+    "Vision",
+    "About",
+    "People",
+    "Events",
+    "Internships",
+  ];
 
   const handlePageNavigation = (page: string) => {
     if (page === "Home") {
