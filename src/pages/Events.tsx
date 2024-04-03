@@ -48,6 +48,16 @@ const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 50,
       cursor: "pointer",
     },
+    registerButton: {
+      backgroundColor: "#252f22",
+      color: "#edf1d6",
+      padding: "0.5rem 8rem",
+      fontSize: "1.3rem",
+      borderRadius: 0,
+      textTransform: "uppercase",
+      width: "fit-content",
+      marginTop: theme.spacing(5),
+    },
   })
 );
 
@@ -55,6 +65,9 @@ const Events: React.FC = () => {
   const classes = useStyles();
 
   const imageLinks = [
+    "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+1.png",
+    "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+2.png",
+    "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+3.png",
     "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+1.png",
     "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+2.png",
     "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+3.png",
@@ -105,6 +118,7 @@ const Events: React.FC = () => {
           <Typography className={classes.sideText}>TTJ Auditorium</Typography>
         </Grid>
       </Grid>
+      <Button className={classes.registerButton}>Register Now</Button>
 
       <Typography className={classes.title2}>Previous Seminars</Typography>
 

@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "1.3rem",
       borderRadius: 0,
       textTransform: "uppercase",
-      width: "fit-content",
       alignSelf: "end",
       marginBottom: theme.spacing(5),
     },
