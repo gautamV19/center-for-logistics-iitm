@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const VisionSecond: React.FC = () => {
+const Vision: React.FC = () => {
   const classes = useStyles();
 
   return (
@@ -74,4 +74,4 @@ const VisionSecond: React.FC = () => {
   );
 };
 
-export default VisionSecond;
+export default Vision;
