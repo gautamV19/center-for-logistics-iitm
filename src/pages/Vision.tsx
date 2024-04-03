@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
-import { Typography, Grid, Box, Button } from "@material-ui/core";
+import { Typography, Grid, Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
