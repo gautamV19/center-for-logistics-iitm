@@ -11,10 +11,10 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(7),
       padding: theme.spacing(4),
       paddingTop: theme.spacing(7),
-      position: "absolute",
-      left: 0,
-      right: 0,
+      backgroundColor: "#252F22",
+      color: "#EDF1D6",
     },
+    root2: {},
     h2text: {
       fontSize: "1.5rem",
       lineHeight: "1.5rem",
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       padding: "1rem 0",
       width: "90%",
-      margin: "0 auto",
+      marginLeft: "3rem",
     },
     navbarText: {
       fontSize: "1.3rem",
@@ -48,12 +48,8 @@ const App: React.FC = () => {
   const navbarItems = ["Home", "People", "Internships", "Vision", "About Us"];
 
   return (
-    <Container
-      maxWidth="xl"
-      style={{ backgroundColor: "#252F22", color: "#EDF1D6" }}
-      className={classes.root}
-    >
-      <Box display={"div"}>
+    <Container maxWidth="xl" className={classes.root}>
+      <Box display={"div"} className={classes.root2}>
         <Typography
           variant="h6"
           style={{ textAlign: "right", marginTop: "20px" }}

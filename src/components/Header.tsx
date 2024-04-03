@@ -3,8 +3,10 @@ import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
+  root: {
+    padding: "0 0.7rem", // 15px converted to rem
+  },
   header: {
-    padding: "0 1rem", // 15px converted to rem
     justifyContent: "space-between",
     borderBottom: "0.1rem solid #0B1215", // 1.5px converted to rem
   },
@@ -49,22 +51,24 @@ export default function Header() {
   };
 
   return (
-    <Grid container className={classes.header}>
-      <Grid item md={4}>
-        <img
-          src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/Logo.png"
-          alt="logo"
-          className={classes.logo}
-        />
-      </Grid>
-      <Grid item container md={8} className={classes.navbarItems}>
-        {navbarItems.map((item, i) => (
-          <Grid item key={i} onClick={() => handlePageNavigation(item)}>
-            <Typography variant="h6" className={classes.navbarText}>
-              {item}
-            </Typography>
-          </Grid>
-        ))}
+    <Grid container className={classes.root}>
+      <Grid container className={classes.header}>
+        <Grid item md={4}>
+          <img
+            src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/Logo.png"
+            alt="logo"
+            className={classes.logo}
+          />
+        </Grid>
+        <Grid item container md={8} className={classes.navbarItems}>
+          {navbarItems.map((item, i) => (
+            <Grid item key={i} onClick={() => handlePageNavigation(item)}>
+              <Typography variant="h6" className={classes.navbarText}>
+                {item}
+              </Typography>
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
     </Grid>
   );
