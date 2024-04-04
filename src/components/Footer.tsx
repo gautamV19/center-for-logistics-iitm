@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Typography, Container, Box } from "@material-ui/core";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import { useNavigate } from "react-router-dom";
 
@@ -76,7 +76,7 @@ const App: React.FC = () => {
             <XIcon />
           </Link>
           <Link href="#" color="inherit" style={{ margin: "0 5px" }}>
-            <GitHubIcon />
+            <YouTubeIcon />
           </Link>
         </Box>
       </Box>

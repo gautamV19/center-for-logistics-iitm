@@ -97,6 +97,39 @@ const aboutTextLong = [
   "Impact - Foremost/Leading industry-academia bridge, producing novel technologies which will become global",
 ];
 
+const aboutTextColored = [
+  { text: "We delve into data, model, and ", color: "#0B1215" },
+  { text: "mechanization-driven solutions ", color: "#609966" },
+  {
+    text: "to make logistics happier and healthier for everyone involved. From ",
+    color: "#0B1215",
+  },
+  {
+    text: "industry-specific applications ",
+    color: "#609966",
+  },
+  {
+    text: "to digital transformation across multi-modal logistics. We tackle challenges like ",
+    color: "#0B1215",
+  },
+  {
+    text: "net-zero carbon footprint",
+    color: "#609966",
+  },
+  {
+    text: ", AI and ML in logistics, and ensuring the wellness and safety of logistics workers through ",
+    color: "#0B1215",
+  },
+  {
+    text: "innovative technologies ",
+    color: "#609966",
+  },
+  {
+    text: "and frameworks.",
+    color: "#0B1215",
+  },
+];
+
 const headingData2 = [
   {
     heading: "Environmental",
@@ -124,9 +157,16 @@ const About: React.FC = () => {
   return (
     <Grid container className={classes.root}>
       <Grid item className={classes.textContainer}>
-        <Typography variant="h2" className={classes.h2text}>
-          {aboutTextLong[0]}
-        </Typography>
+        {aboutTextColored.map((item, index) => (
+          <Typography
+            key={index}
+            variant="h2"
+            style={{ color: item.color, display: "inline" }}
+            className={classes.h2text}
+          >
+            {item.text}
+          </Typography>
+        ))}
       </Grid>
       {headingData.map((item, index) => (
         <Grid container item key={index} className={classes.secondContainer}>

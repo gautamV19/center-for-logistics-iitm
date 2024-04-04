@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -55,10 +55,12 @@ export default function Header() {
         </Grid>
         <Grid item container md={8} className={classes.navbarItems}>
           {navbarItems.map((item, i) => (
-            <Grid item key={i} onClick={() => handlePageNavigation(item)}>
-              <Typography variant="h6" className={classes.navbarText}>
-                {item}
-              </Typography>
+            <Grid item key={i}>
+              <Button onClick={() => handlePageNavigation(item)}>
+                <Typography variant="h6" className={classes.navbarText}>
+                  {item}
+                </Typography>
+              </Button>
             </Grid>
           ))}
         </Grid>

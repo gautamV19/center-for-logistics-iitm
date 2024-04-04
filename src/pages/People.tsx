@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "100%",
     },
     arrowImage: {
-      marginTop: theme.spacing(5),
       width: "8rem",
     },
     root: {
@@ -40,6 +39,9 @@ const useStyles = makeStyles((theme: Theme) =>
       borderLeft: "0.1rem solid",
       borderTop: "0.1rem solid",
     },
+    nameContainerLeft: {
+      padding: theme.spacing(5),
+    },
     logoContainer: {
       padding: theme.spacing(5),
       borderTop: "0.1rem solid",
@@ -68,47 +70,57 @@ export default function People() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container className={classes.root}>
-        <Grid item xs={6}>
-          <img
-            className={classes.media}
-            src="https://social-hero.s3.ap-south-1.amazonaws.com/People/nitin.png"
-            alt="people"
-          />
-        </Grid>
-        <Grid item className={classes.nameContainer} xs={3}>
-          <Typography className={classes.subtitle}>Nitin Tatiwala</Typography>
-          <Typography className={classes.sideText}>
-            Vice President, Amea Marketing at FedEx
-          </Typography>
-          <Box
-            style={{
-              borderBottom: "0.1rem solid",
-              width: "fit-content",
-              cursor: "pointer",
-            }}
-          >
-            <Typography className={classes.sideText} display="inline">
-              Visit Site
-            </Typography>
-            <ArrowRightAltIcon
-              sx={{ fontSize: "1.2rem", verticalAlign: "middle" }}
-            />
-          </Box>
-          <Box>
+      <Grid item container className={classes.root}>
+        <Grid container item xs={6}>
+          <Grid item xs={12}>
             <img
-              src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowLeft.png"
+              className={classes.media}
+              src="https://social-hero.s3.ap-south-1.amazonaws.com/People/nitin.png"
+              alt="people"
+            />
+          </Grid>
+          <Grid item className={classes.nameContainerLeft} xs={6}>
+            <Typography className={classes.subtitle}>
+              Kami Vishwanathan
+            </Typography>
+            <Typography className={classes.sideText}>
+              President - Middle East, Indian Subcontinent and Africa at FedEx
+            </Typography>
+            <img
+              src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowRight.png"
               alt="left-arrow"
               className={classes.arrowImage}
             />
-          </Box>
+          </Grid>
         </Grid>
-        <Grid item xs={3} className={classes.logoContainer}>
-          <img
-            src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/fedex-logo.png"
-            alt="fedex"
-            className={classes.media}
-          />
+        <Grid item xs={6} container>
+          <Grid item className={classes.nameContainer} xs={6}>
+            <Typography className={classes.subtitle}>Nitin Tatiwala</Typography>
+            <Typography className={classes.sideText}>
+              Vice President, Amea Marketing at FedEx
+            </Typography>
+            <Box>
+              <img
+                src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowLeft.png"
+                alt="left-arrow"
+                className={classes.arrowImage}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={6} className={classes.logoContainer}>
+            <img
+              src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/fedex-logo.png"
+              alt="fedex"
+              className={classes.media}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <img
+              className={classes.media}
+              src="https://social-hero.s3.ap-south-1.amazonaws.com/People/kami.jpeg"
+              alt="people"
+            />
+          </Grid>
         </Grid>
       </Grid>
     </>
