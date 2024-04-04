@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     nameContainerLeft: {
       padding: theme.spacing(5),
+      textAlign: "end",
     },
     logoContainer: {
       padding: theme.spacing(5),
@@ -79,7 +80,8 @@ export default function People() {
               alt="people"
             />
           </Grid>
-          <Grid item className={classes.nameContainerLeft} xs={6}>
+          <Grid item xs={5}></Grid>
+          <Grid item className={classes.nameContainerLeft} xs={7}>
             <Typography className={classes.subtitle}>
               Kami Vishwanathan
             </Typography>
