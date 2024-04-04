@@ -1,5 +1,6 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Box, CssBaseline, Typography, useMediaQuery } from "@mui/material";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -37,15 +38,43 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const matches = useMediaQuery("(max-width:1080px)");
+
   return (
-    <div
-      style={{
-        maxWidth: "1440px",
-        margin: "auto",
-      }}
-    >
-      <RouterProvider router={router} />
-    </div>
+    <>
+      <CssBaseline />
+      {matches ? (
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          height="100vh"
+        >
+          <Box
+            border="1.5px solid black"
+            width="90%"
+            p={2}
+            bgcolor="background.paper"
+            boxShadow={3}
+            borderRadius={2}
+          >
+            <Typography variant="h5" color="textPrimary" textAlign="center">
+              Currently this website is only supported on desktop. Try accessing
+              it from a desktop.
+            </Typography>
+          </Box>
+        </Box>
+      ) : (
+        <div
+          style={{
+            maxWidth: "1440px",
+            margin: "auto",
+          }}
+        >
+          <RouterProvider router={router} />
+        </div>
+      )}
+    </>
   );
 }
 
