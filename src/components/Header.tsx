@@ -33,14 +33,7 @@ export default function Header() {
   const classes = useStyles();
   const navigate = useNavigate();
 
-  const navbarItems = [
-    "Home",
-    "Vision",
-    "About",
-    "People",
-    "Events",
-    "Internships",
-  ];
+  const navbarItems = ["Home", "About", "People", "Events", "Internships"];
 
   const handlePageNavigation = (page: string) => {
     if (page === "Home") {

@@ -4,6 +4,7 @@ import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -30,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "1rem 0",
       width: "90%",
       marginLeft: "3rem",
+      marginBottom: "1rem",
     },
     navbarText: {
       fontSize: "1.3rem",
@@ -44,8 +46,17 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const App: React.FC = () => {
   const classes = useStyles();
+  const navigate = useNavigate();
 
-  const navbarItems = ["Home", "People", "Internships", "Vision", "About Us"];
+  const navbarItems = ["Home", "About", "People", "Events", "Internships"];
+
+  const handlePageNavigation = (page: string) => {
+    if (page === "Home") {
+      navigate("/");
+    } else {
+      navigate(`/${page.toLowerCase()}`);
+    }
+  };
 
   return (
     <Container maxWidth="xl" className={classes.root}>
@@ -71,7 +82,11 @@ const App: React.FC = () => {
       </Box>
       <Box display={"div"} className={classes.navbarItems}>
         {navbarItems.map((item, i) => (
-          <Typography className={classes.navbarText} key={i}>
+          <Typography
+            className={classes.navbarText}
+            key={i}
+            onClick={() => handlePageNavigation(item)}
+          >
             {item}
           </Typography>
         ))}

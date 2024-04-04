@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Internships from "./pages/Internships";
 import People from "./pages/People";
-import Vision from "./pages/Vision";
 import Error from "./pages/Error";
 import Events from "./pages/Events";
 import AppPage from "./AppPage";
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
   {
     path: "/people",
     element: <AppPage children={<People />} />,
-  },
-  {
-    path: "/vision",
-    element: <AppPage children={<Vision />} />,
   },
   {
     path: "/events",

@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme: Theme) =>
     sideText: {
       fontSize: "1.6rem",
       lineHeight: "1.7rem",
-      marginBottom: theme.spacing(2),
       alignSelf: "end",
       textAlign: "end",
       width: "35%",
