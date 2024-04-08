@@ -121,18 +121,18 @@ const VisionSecond: React.FC = () => {
             </Grid>
             <Grid item className={classes.leftBoxBottom} xs={4}>
               <Typography variant="h2" align="center">
-                $10M
+                8
               </Typography>
               <Typography variant="h6" align="center">
-                Grant from FedEx
+                Faculty Members from IITM
               </Typography>
             </Grid>
             <Grid item className={classes.leftBoxBottom} xs={4}>
               <Typography variant="h2" align="center">
-                $10M
+                ∞
               </Typography>
               <Typography variant="h6" align="center">
-                Grant from FedEx
+                Opportunities
               </Typography>
             </Grid>
           </Grid>

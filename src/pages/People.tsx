@@ -73,12 +73,12 @@ const peopleData = [
   {
     right: {
       name: "Dr. N.S. Narayanaswamy",
-      designation: "Computer Science",
+      designation: "Computer Science Department, IIT Madras",
       image: "https://social-hero.s3.ap-south-1.amazonaws.com/People/swamy.jpg",
     },
     left: {
       name: "Dr. Arshinder Kaur",
-      designation: "Management Studies",
+      designation: "Management Studies Department, IIT Madras",
       image:
         "https://social-hero.s3.ap-south-1.amazonaws.com/People/ArshinderKaur.jpg",
     },

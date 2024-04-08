@@ -1,6 +1,6 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Box, CssBaseline, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,39 +10,41 @@ import Error from "./pages/Error";
 import Events from "./pages/Events";
 import AppPage from "./AppPage";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <AppPage children={<Home />} />,
-  },
-  {
-    path: "/about",
-    element: <AppPage children={<About />} />,
-  },
-  {
-    path: "/internships",
-    element: <AppPage children={<Internships />} />,
-  },
-  {
-    path: "/people",
-    element: <AppPage children={<People />} />,
-  },
-  {
-    path: "/events",
-    element: <AppPage children={<Events />} />,
-  },
-  {
-    path: "*",
-    element: <AppPage children={<Error />} />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <AppPage children={<Home />} />,
+    },
+    {
+      path: "/about",
+      element: <AppPage children={<About />} />,
+    },
+    {
+      path: "/internships",
+      element: <AppPage children={<Internships />} />,
+    },
+    {
+      path: "/people",
+      element: <AppPage children={<People />} />,
+    },
+    {
+      path: "/events",
+      element: <AppPage children={<Events />} />,
+    },
+    {
+      path: "*",
+      element: <AppPage children={<Error />} />,
+    },
+  ],
+  { basename: "/logistics" }
+);
 
 function App() {
-  const matches = useMediaQuery("(max-width:1080px)");
+  const matches = useMediaQuery("(max-width:1300px)");
 
   return (
     <>
-      <CssBaseline />
       {matches ? (
         <Box
           display="flex"
