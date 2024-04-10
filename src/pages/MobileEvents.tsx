@@ -23,23 +23,9 @@ const useStyles = makeStyles((theme: Theme) =>
       lineHeight: "0.78rem",
       margin: "auto",
     },
-    sideText: {
-      fontSize: "1.6rem",
-      lineHeight: "1.7rem",
-      marginBottom: theme.spacing(2),
-      textAlign: "justify",
-    },
     subtitle: {
       fontSize: "1.1rem",
       lineHeight: "1.1rem",
-    },
-    title2: {
-      fontWeight: 400,
-      fontSize: "5rem",
-      lineHeight: "5rem",
-      marginTop: theme.spacing(5),
-      marginBottom: theme.spacing(5),
-      width: "90%",
     },
     button: {
       padding: 0,
