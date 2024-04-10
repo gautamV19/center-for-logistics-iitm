@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(1),
     },
     landingTitle: {
-      fontWeight: 500,
+      fontWeight: 450,
       fontSize: "3rem",
       lineHeight: "3rem",
       marginBottom: theme.spacing(2),
