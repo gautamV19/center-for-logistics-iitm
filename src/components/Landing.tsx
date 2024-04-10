@@ -51,7 +51,7 @@ const Landing: React.FC = () => {
   ];
 
   return (
-    <Grid container className={classes.root}>
+    <Grid container className={classes.root} xs={12}>
       <Typography variant="h1" className={classes.title}>
         Making logistics sustainable with the help of A.I.
       </Typography>
