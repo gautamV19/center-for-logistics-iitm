@@ -77,8 +77,8 @@ export default function Header() {
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
           >
-            {navbarItems.map((item) => (
-              <MenuItem onClick={() => handlePageNavigation(item)}>
+            {navbarItems.map((item, index) => (
+              <MenuItem onClick={() => handlePageNavigation(item)} key={index}>
                 {item}
               </MenuItem>
             ))}
