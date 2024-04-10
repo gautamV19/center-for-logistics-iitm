@@ -10,6 +10,13 @@ import Error from "./pages/Error";
 import Events from "./pages/Events";
 import AppPage from "./AppPage";
 
+import MobileHome from "./pages/MobileHome";
+import MobileAbout from "./pages/MobileAbout";
+import MobileInternships from "./pages/MobileInternships";
+import MobilePeople from "./pages/MobilePeople";
+import MobileError from "./pages/MobileError";
+import MobileEvents from "./pages/MobileEvents";
+
 const router = createBrowserRouter(
   [
     {
@@ -40,10 +47,42 @@ const router = createBrowserRouter(
   { basename: "/logistics" }
 );
 
+const mobileRouter = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <AppPage children={<MobileHome />} />,
+    },
+    {
+      path: "/about",
+      element: <AppPage children={<MobileAbout />} />,
+    },
+    {
+      path: "/internships",
+      element: <AppPage children={<MobileInternships />} />,
+    },
+    {
+      path: "/people",
+      element: <AppPage children={<MobilePeople />} />,
+    },
+    {
+      path: "/events",
+      element: <AppPage children={<MobileEvents />} />,
+    },
+    {
+      path: "*",
+      element: <AppPage children={<MobileError />} />,
+    },
+  ],
+  { basename: "/logistics" }
+);
+
 function App() {
   const matches = useMediaQuery("(max-width:1300px)");
 
-  return (
+  return matches ? (
+    <RouterProvider router={mobileRouter} />
+  ) : (
     <div
       style={{
         maxWidth: "1440px",
