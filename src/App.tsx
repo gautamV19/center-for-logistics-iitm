@@ -1,6 +1,6 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Box, useMediaQuery } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -78,11 +78,9 @@ const mobileRouter = createBrowserRouter(
 );
 
 function App() {
-  const matches = useMediaQuery("(max-width:1300px)");
+  const matches = useMediaQuery("(min-width:768px)");
 
   return matches ? (
-    <RouterProvider router={mobileRouter} />
-  ) : (
     <div
       style={{
         maxWidth: "1440px",
@@ -91,6 +89,8 @@ function App() {
     >
       <RouterProvider router={router} />
     </div>
+  ) : (
+    <RouterProvider router={mobileRouter} />
   );
 }
 

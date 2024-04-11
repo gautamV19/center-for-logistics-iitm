@@ -11,7 +11,7 @@ interface AppPageProps {
 }
 
 const AppPage: React.FC<AppPageProps> = (props) => {
-  const matches = useMediaQuery("(max-width:1300px)");
+  const matches = useMediaQuery("(max-width:768px)");
 
   return (
     <>
