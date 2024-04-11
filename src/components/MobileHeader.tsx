@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     justifyContent: "space-between",
-    borderBottom: "0.1rem solid #0B1215",
+    borderBottom: "0.7px solid #0B1215",
   },
   menuButton: {
     marginRight: theme.spacing(2),
