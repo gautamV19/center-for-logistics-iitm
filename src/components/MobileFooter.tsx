@@ -18,10 +18,9 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "1rem",
       lineHeight: "1rem",
       textAlign: "right",
-      marginTop: "20px",
     },
     title: {
-      fontWeight: 600,
+      fontWeight: 500,
       fontSize: "3.4rem",
       textAlign: "center",
     },
@@ -36,6 +35,10 @@ const useStyles = makeStyles((theme: Theme) =>
       cursor: "pointer",
       textTransform: "capitalize",
       marginRight: "0.8rem",
+      textAlign: "center",
+    },
+    footNote: {
+      fontSize: "0.8rem",
       textAlign: "center",
     },
   })
@@ -88,7 +91,7 @@ const App: React.FC = () => {
         ))}
       </Box>
       <Typography className={classes.title}>SUSTAINABLE</Typography>
-      <Typography className={classes.navbarText}>
+      <Typography className={classes.footNote}>
         © 2028 By Center For Logistics IIT Madras
       </Typography>
     </Container>
