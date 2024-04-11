@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#609966",
       width: "90%",
       display: "inline",
-      marginBottom: theme.spacing(5),
     },
     titleBlack: {
       fontWeight: 400,
@@ -28,6 +27,9 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "90%",
       color: "#0B1215",
       display: "inline",
+    },
+    titleContainer: {
+      marginBottom: theme.spacing(5),
     },
     sideText: {
       fontSize: "1.6rem",
@@ -71,6 +73,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+const title = [
+  "FedEx & IITM Seminar ",
+  "on Smart and sustainable supply Chains and Logistics",
+];
+
 const Events: React.FC = () => {
   const classes = useStyles();
 
@@ -85,12 +92,10 @@ const Events: React.FC = () => {
 
   return (
     <Grid container className={classes.root}>
-      <Typography className={classes.titleBlack}>
-        FedEx & IITM Seminar
-      </Typography>
-      <Typography className={classes.titleGreen}>
-        on Smart and sustainable supply Chains and Logistics
-      </Typography>
+      <Grid item className={classes.titleContainer}>
+        <Typography className={classes.titleBlack}>{title[0]}</Typography>
+        <Typography className={classes.titleGreen}>{title[1]}</Typography>
+      </Grid>
       <Typography className={classes.sideText}>
         The talk on Interesting Logistics Problems in India highlights the
         substantial, yet digitally underdeveloped, logistics market in India,

@@ -65,36 +65,46 @@ const headingData = [
   {
     heading: "Net Zero Carbon Footprint",
     text: [
-      "Framework for Carbon Footprint",
-      "Track, manage, and reduce carbon footprint",
+      "• Framework for Carbon Footprint",
+      "• Track, manage, and reduce carbon footprint",
     ],
   },
   {
     heading: "Digital Transformation in Logistics",
     text: [
-      "Integrated logistics management",
-      "Dynamic, predictive and prescriptive analytics",
+      "• Integrated logistics management",
+      "• Dynamic, predictive and prescriptive analytics",
     ],
   },
   {
     heading: "Industry-specific Applications and Last-mile",
     text: [
-      "New Logistics Mode and Logistics Infrastructure",
-      "Multi-modal logistics - ship, air, road, rail, drone, EV",
+      "• New Logistics Mode and Logistics Infrastructure",
+      "• Multi-modal logistics - ship, air, road, rail, drone, EV",
     ],
   },
   {
     heading: "Socially Sustainable Logistics",
     text: [
-      "Driver wellness and safety",
-      "Warehouse worker wellness and safety via use of mechanization",
+      "• Driver wellness and safety",
+      "• Warehouse worker wellness and safety via use of mechanization",
     ],
   },
 ];
 
-const aboutTextLong = [
-  "We delve into data, model, and mechanization-driven solutions to make logistics happier and healthier for everyone involved. From industry-specific applications to digital transformation across multi-modal logistics. We tackle challenges like net-zero carbon footprint, AI and ML in logistics, and ensuring the wellness and safety of logistics workers through innovative technologies and frameworks.",
-  "Impact - Foremost/Leading industry-academia bridge, producing novel technologies which will become global",
+const aboutTextColored2 = [
+  {
+    text: "Impact - Foremost/Leading industry-academia bridge, producing ",
+    color: "#0B1215",
+  },
+  {
+    text: "novel technologies ",
+    color: "#609966",
+  },
+  {
+    text: "which will become global",
+    color: "#0B1215",
+  },
 ];
 
 const aboutTextColored = [
@@ -134,19 +144,19 @@ const headingData2 = [
   {
     heading: "Environmental",
     text: [
-      "Measure, Track, and Control Emissions way to net Zero from the logistics sector",
+      "• Measure, Track, and Control Emissions way to net Zero from the logistics sector",
     ],
   },
   {
     heading: "Social",
     text: [
-      "Measure, Track & Manage Driver, Loader, Logistics Stackholder Effort towards safety and reliability",
+      "• Measure, Track & Manage Driver, Loader, Logistics Stackholder Effort towards safety and reliability",
     ],
   },
   {
     heading: "Digital",
     text: [
-      "Algorithmic and ML based Digital transformation for sustainable logistics",
+      "• Algorithmic and ML based Digital transformation for sustainable logistics",
     ],
   },
 ];
@@ -186,10 +196,17 @@ const About: React.FC = () => {
           </Grid>
         </Grid>
       ))}
-      <Grid item className={classes.textContainer}>
-        <Typography variant="h2" className={classes.h2text2}>
-          {aboutTextLong[1]}
-        </Typography>
+      <Grid item className={classes.textContainer} style={{ width: "60%" }}>
+        {aboutTextColored2.map((item, index) => (
+          <Typography
+            key={index}
+            variant="h2"
+            style={{ color: item.color, display: "inline" }}
+            className={classes.h2text2}
+          >
+            {item.text}
+          </Typography>
+        ))}
       </Grid>
       {headingData2.map((item, index) => (
         <Grid container item key={index} className={classes.secondContainer}>
