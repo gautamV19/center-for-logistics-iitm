@@ -12,12 +12,22 @@ const useStyles = makeStyles((theme: Theme) =>
       marginBottom: theme.spacing(7),
       flexDirection: "column",
     },
-    title: {
+    titleGreen: {
       fontWeight: 400,
       fontSize: "6.6rem",
       lineHeight: "6.6rem",
-      marginBottom: theme.spacing(5),
+      color: "#609966",
       width: "90%",
+      display: "inline",
+      marginBottom: theme.spacing(5),
+    },
+    titleBlack: {
+      fontWeight: 400,
+      fontSize: "6.6rem",
+      lineHeight: "6.6rem",
+      width: "90%",
+      color: "#0B1215",
+      display: "inline",
     },
     sideText: {
       fontSize: "1.6rem",
@@ -75,14 +85,16 @@ const Events: React.FC = () => {
 
   return (
     <Grid container className={classes.root}>
-      <Typography className={classes.title}>
-        FedEx & IITM Seminar on Smart and sustainable supply Chains and
-        Logistics
+      <Typography className={classes.titleBlack}>
+        FedEx & IITM Seminar
+      </Typography>
+      <Typography className={classes.titleGreen}>
+        on Smart and sustainable supply Chains and Logistics
       </Typography>
       <Typography className={classes.sideText}>
         The talk on Interesting Logistics Problems in India highlights the
         substantial, yet digitally underdeveloped, logistics market in India,
-        valued at around US$ 360 billion. It emphasizes the industry's vast
+        valued at around US$ 360 billion. It ephasizes the industry's vast
         inefficiencies and the significant opportunities for innovation through
         technology integration. Drawing from the speaker's experience as the
         co-founder of Mera Transport, an attempt to create an Uber-like platform

@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderTop: "0.1rem solid",
     },
     nameContainerLeft: {
-      padding: theme.spacing(5),
+      padding: theme.spacing(5, 2),
       textAlign: "end",
     },
     logoContainer: {
