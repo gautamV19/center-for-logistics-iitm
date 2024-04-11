@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
     textContainer: {
       paddingBottom: theme.spacing(2),
       borderBottom: "0.7px solid",
+      width: "100%",
     },
     startText: {
       fontSize: "1.2rem",
@@ -23,6 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
     sectionContainer: {
       marginBottom: theme.spacing(2),
       padding: theme.spacing(3, 0),
+      width: "100%",
       borderBottom: "0.7px solid",
     },
     sectionTitle: {
