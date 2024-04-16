@@ -1,5 +1,5 @@
 import React from "react";
-
+import { homeContent } from "../assets/textData/home";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import { Typography, Grid, ListItem, List } from "@material-ui/core";
 
@@ -120,22 +120,15 @@ const useStyles = makeStyles((theme: Theme) =>
 const Landing: React.FC = () => {
   const classes = useStyles();
 
-  const imageLinks = [
-    "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+1.png",
-    "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+2.png",
-    "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+3.png",
-  ];
+  const imageLinks = homeContent.titleSection.imageLinks;
 
   return (
     <Grid container className={classes.root} xs={12}>
       <Typography variant="h1" className={classes.landingTitle}>
-        Making logistics sustainable with the help of A.I.
+        {homeContent.titleSection.heading}
       </Typography>
       <Typography variant="h2" className={classes.landingSubtitle}>
-        Foremost/Leading industry-academia bridge, producing novel technologies
-        which will become global standards to Measure, Track, and Control
-        Emissions, Manage Driver/ Loader Effort & take decisions based on
-        algorithm & machine learning
+        {homeContent.titleSection.subHeading}
       </Typography>
       <Grid container item spacing={2}>
         {imageLinks.map((link, index) => (
@@ -152,22 +145,15 @@ const Landing: React.FC = () => {
 const OurVision: React.FC = () => {
   const classes = useStyles();
 
-  const visionItems = [
-    "Net Zero Carbon Footprint",
-    "Digital Transformation in Multi-modal Logistics",
-    "Industry-specific Applications",
-    "Healthier Drivers and Warehouse Workers",
-  ];
+  const visionItems = homeContent.visionSection.visionItems;
 
   return (
     <div className={classes.root}>
       <Typography variant="h1" className={classes.visionTitle}>
-        Our Vision
+        {homeContent.visionSection.heading}
       </Typography>
       <Typography variant="body1" className={classes.visionSubtitle}>
-        Our vision is to build a center which fosters innovation and enables
-        environmental and social sustainability in logistics and supply chains
-        with cutting-edge digital transformation technologies.
+        {homeContent.visionSection.content}
       </Typography>
       <List>
         {visionItems.map((item, index) => (
@@ -201,29 +187,15 @@ const OurVision: React.FC = () => {
 const VisionSecond: React.FC = () => {
   const classes = useStyles();
 
-  const data = [
-    {
-      img: "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+1.png",
-      text: "Measure, Track, and Control Emissions way to net Zero from the logistics sector—environmental sustainability",
-    },
-    {
-      img: "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+2.png",
-      text: "Measure, Track & Manage Driver/ Loader Effort towards happiness and safety and reliability—social sustainability",
-    },
-    {
-      img: "https://social-hero.s3.ap-south-1.amazonaws.com/Home/Intro/Rectangle+3.png",
-      text: "Decision Making for Sustainability: Algorithmic and ML based Digital transformation for sustainable logistics",
-    },
-  ];
+  const data = homeContent.supplyChainSection.data;
 
   return (
     <div className={classes.root}>
       <Typography variant="h1" className={classes.landingTitle}>
-        Smart and Sustainable supply chain
+        {homeContent.supplyChainSection.heading}
       </Typography>
       <Typography variant="h2" className={classes.h2text}>
-        Foremost/Leading industry-academia bridge, producing novel technologies
-        which will become global standards to
+        {homeContent.supplyChainSection.subHeading}
       </Typography>
       <Grid container item spacing={2}>
         {data.map((item, index) => (
@@ -245,7 +217,7 @@ const About: React.FC = () => {
   return (
     <Grid className={classes.root}>
       <Typography variant="h1" className={classes.visionTitle}>
-        About Us
+        {homeContent.aboutSection.heading}
       </Typography>
       <Grid item container>
         <Grid
@@ -257,8 +229,7 @@ const About: React.FC = () => {
         >
           <Grid item className={classes.rightBoxTop}>
             <Typography variant="h2" className={classes.aboutSubtitle}>
-              A joint research of FedEx & IIT Madras, India to make a
-              environment friendly green supply chain.
+              {homeContent.aboutSection.subHeading}
             </Typography>
           </Grid>
           <Grid item>
@@ -274,16 +245,10 @@ const About: React.FC = () => {
         <Grid item container xs={6} className={classes.leftBox}>
           <Grid item className={classes.leftBoxTop}>
             <Typography className={classes.abouth2text}>
-              We, at the IIT Madras, are working towards making logistics
-              operations more efficient and sustainable by using
-              state-of-the-art algorithms and technologies.
+              {homeContent.aboutSection.content[0]}
             </Typography>
             <Typography className={classes.h2text2}>
-              Having built route optimizing, vehicle allocation, ride/space
-              sharing, orienteering algorithms for the last 4 years, we have
-              integrated all into a SaaS software service. We look to improve
-              the efficiency of our algorithms and add a lot more features in
-              the coming month.
+              {homeContent.aboutSection.content[1]}
             </Typography>
           </Grid>
           <Grid item container>

@@ -118,7 +118,7 @@ const Landing: React.FC = () => {
   return (
     <Grid container className={classes.root} xs={12}>
       <Typography variant="h1" className={classes.landingTitle}>
-        Making logistics sustainable with the help of A.I.
+        FedEx Centre for Smart Sustainable Supply Chains
       </Typography>
       <Typography variant="h2" className={classes.landingSubtitle}>
         Foremost/Leading industry-academia bridge, producing novel technologies
