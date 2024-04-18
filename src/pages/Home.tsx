@@ -1,7 +1,7 @@
 import React from "react";
 import { homeContent } from "../assets/textData/home";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
-import { Typography, Grid, ListItem, List } from "@material-ui/core";
+import { Typography, Grid, ListItem, List, Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -14,16 +14,19 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     landingTitle: {
       fontWeight: 400,
-      fontSize: "6.6rem",
+      fontSize: "5rem",
       lineHeight: "6.6rem",
       marginBottom: theme.spacing(5),
-      textAlign: "center",
+      textAlign: "left",
     },
     visionTitle: {
-      fontWeight: 400,
-      fontSize: "6.6rem",
-      lineHeight: "6.7rem",
       marginBottom: theme.spacing(5),
+      marginLeft: "100px",
+    },
+    visiontext: {
+      fontWeight: 400,
+      fontSize: "5rem",
+      lineHeight: "6.7rem",
       textAlign: "left",
     },
     landingSubtitle: {
@@ -124,9 +127,17 @@ const Landing: React.FC = () => {
 
   return (
     <Grid container className={classes.root} xs={12}>
-      <Typography variant="h1" className={classes.visionTitle}>
-        {homeContent.titleSection.heading}
-      </Typography>
+      <Box className={classes.visionTitle}>
+        <Typography variant="h1" className={classes.visiontext}>
+          FedEx
+        </Typography>
+        <Typography variant="h1" className={classes.visiontext}>
+          Centre for
+        </Typography>
+        <Typography variant="h1" className={classes.visiontext}>
+          Smart Sustainable Supply Chains
+        </Typography>
+      </Box>
       <Typography variant="h2" className={classes.landingSubtitle}>
         {homeContent.titleSection.subHeading}
       </Typography>
