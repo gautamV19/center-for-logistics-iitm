@@ -82,21 +82,21 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function People() {
   const classes = useStyles();
 
-  const RightArrow = () => (
-    <img
-      src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowRight.png"
-      alt="right-arrow"
-      className={classes.arrowImage}
-    />
-  );
+  // const RightArrow = () => (
+  //   <img
+  //     src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowRight.png"
+  //     alt="right-arrow"
+  //     className={classes.arrowImage}
+  //   />
+  // );
 
-  const LeftArrow = () => (
-    <img
-      src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowLeft.png"
-      alt="left-arrow"
-      className={classes.arrowImage}
-    />
-  );
+  // const LeftArrow = () => (
+  //   <img
+  //     src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowLeft.png"
+  //     alt="left-arrow"
+  //     className={classes.arrowImage}
+  //   />
+  // );
 
   return (
     <>
