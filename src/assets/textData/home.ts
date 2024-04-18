@@ -1,6 +1,6 @@
 export const homeContent = {
   titleSection: {
-    heading: "FedEx Centre for Smart Sustainable Supply Chains",
+    heading: "FedEx Centre for SMART SUSTAINABLE SUPPLY CHAINS",
     subHeading:
       "Foremost/Leading industry-academia bridge, producing novel technologies which will become global standards to Measure, Track, and Control Emissions, Manage Driver/ Loader Effort & take decisions based on algorithm & machine learning",
     imageLinks: [

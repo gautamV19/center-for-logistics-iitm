@@ -9,6 +9,15 @@ const useStyles = makeStyles((theme: Theme) =>
       height: "500px",
       marginBottom: "30px",
     },
+    subCont: {
+      // border: "2px solid",
+      // maxWidth: "50%",
+    },
+    medialogo: {
+      width: "300px",
+      height: "100px",
+      marginLeft: "40%",
+    },
     firstCont: {
       borderBottom: "2px solid",
       paddingBottom: "20px",
@@ -16,12 +25,15 @@ const useStyles = makeStyles((theme: Theme) =>
     media: {
       width: "100%",
       marginTop: theme.spacing(2),
+      height: "400px",
     },
     arrowImage: {
       width: "8rem",
     },
     root: {
       paddingLeft: "0.7rem",
+      paddingRight: "0.7rem",
+      // maxHeight: "450px",
     },
     title: {
       fontWeight: 400,
@@ -110,101 +122,121 @@ export default function People() {
       <Typography className={classes.sectionTitle}>Governing Board</Typography>
       <Box className={classes.firstCont}>
         {peopleData.map((item, index) => (
-          <Grid container>
-            <Grid container className={classes.root} key={index}>
-              <Grid item xs={2}></Grid>
-              <Grid item xs={3}>
+          <Grid container className={classes.root} key={index}>
+            {index == 0 || index == 1 ? (
+              <Grid item xs={12} className={classes.logoContainer}>
+                <img
+                  src={item.logo}
+                  alt="fedex"
+                  className={classes.medialogo}
+                />
+              </Grid>
+            ) : null}
+
+            <Grid container item className={classes.subCont} xs={6}>
+              <Grid item xs={6}>
                 <img
                   className={classes.media}
                   src={item.left.image}
                   alt="people"
                 />
               </Grid>
-              <Grid item className={classes.nameContainer} xs={3}>
+              <Grid item className={classes.nameContainer} xs={6}>
                 <Typography className={classes.subtitle}>
                   {item.left.name}
                 </Typography>
                 <Typography className={classes.sideText}>
                   {item.left.designation}
                 </Typography>
-                <LeftArrow />
               </Grid>
-              <Grid item xs={1}></Grid>
-              {index == 2 ? (
-                <Grid item xs={3}></Grid>
-              ) : (
-                <Grid item xs={3} className={classes.logoContainer}>
-                  <img src={item.logo} alt="fedex" className={classes.media} />
-                </Grid>
-              )}
+              {/* <LeftArrow /> */}
             </Grid>
-            <Grid container>
-              <Grid item xs={4}></Grid>
-              <Grid item className={classes.nameContainerLeft} xs={3}>
-                <Typography className={classes.subtitle}>
-                  {item.right.name}
-                </Typography>
-                <Typography className={classes.sideText}>
-                  {item.right.designation}
-                </Typography>
-                <RightArrow />
-              </Grid>
-              <Grid item xs={3}>
+
+            <Grid container item xs={6} className={classes.subCont}>
+              <Grid item xs={6}>
                 <img
                   className={classes.media}
                   src={item.right.image}
                   alt="people"
                 />
               </Grid>
-              <Grid item xs={2}></Grid>
+              <Grid item className={classes.nameContainerLeft} xs={6}>
+                <Typography className={classes.subtitle}>
+                  {item.right.name}
+                </Typography>
+                <Typography className={classes.sideText}>
+                  {item.right.designation}
+                </Typography>
+                {/* <RightArrow /> */}
+              </Grid>
             </Grid>
+            {/* {index == 2 ? (
+              <Grid item xs={3}></Grid>
+            ) : (
+              <Grid item xs={3} className={classes.logoContainer}>
+                <img src={item.logo} alt="fedex" className={classes.media} />
+              </Grid>
+            )} */}
           </Grid>
+          // <Grid container>
+          //   <Grid item xs={4}></Grid>
+          //
+
+          //   <Grid item xs={2}></Grid>
+          // </Grid>
         ))}
       </Box>
       <Typography className={classes.sectionTitle}>Faculty</Typography>
       {facultyData.map((item, index) => (
-        <Grid item container className={classes.root} key={index}>
-          <Grid container item xs={2}></Grid>
-          <Grid item xs={3}>
-            <img className={classes.media} src={item.left.image} alt="people" />
-          </Grid>
-          <Grid item className={classes.nameContainer} xs={3}>
-            <Typography className={classes.subtitle}>
-              {item.left.name}
-            </Typography>
-            <Typography className={classes.sideText}>
-              {item.left.designation}
-            </Typography>
-            <LeftArrow />
-          </Grid>
-          <Grid container item xs={1}></Grid>
+        <Grid container className={classes.root} key={index}>
           {index == 0 ? (
-            <Grid item xs={3} className={classes.logoContainer}>
-              <img src={item.logo} alt="fedex" className={classes.media} />
+            <Grid item xs={12} className={classes.logoContainer}>
+              <img src={item.logo} alt="fedex" className={classes.medialogo} />
             </Grid>
-          ) : (
-            <Grid item xs={3} />
-          )}
-
-          <Grid container item xs={4}></Grid>
-          <Grid item className={classes.nameContainerLeft} xs={3}>
-            <Typography className={classes.subtitle}>
-              {item.right.name}
-            </Typography>
-            <Typography className={classes.sideText}>
-              {item.right.designation}
-            </Typography>
-            <RightArrow />
+          ) : null}
+          <Grid container xs={6}>
+            <Grid item xs={6}>
+              <img
+                className={classes.media}
+                src={item.left.image}
+                alt="people"
+              />
+            </Grid>
+            <Grid item className={classes.nameContainer} xs={6}>
+              <Typography className={classes.subtitle}>
+                {item.left.name}
+              </Typography>
+              <Typography className={classes.sideText}>
+                {item.left.designation}
+              </Typography>
+            </Grid>
+            {/* <LeftArrow /> */}
           </Grid>
-
-          <Grid item xs={3}>
-            <img
-              className={classes.media}
-              src={item.right.image}
-              alt="people"
-            />
+          <Grid container xs={6}>
+            <Grid item xs={6}>
+              <img
+                className={classes.media}
+                src={item.right.image}
+                alt="people"
+              />
+            </Grid>
+            <Grid item className={classes.nameContainerLeft} xs={6}>
+              <Typography className={classes.subtitle}>
+                {item.right.name}
+              </Typography>
+              <Typography className={classes.sideText}>
+                {item.right.designation}
+              </Typography>
+              {/* <RightArrow /> */}
+            </Grid>
           </Grid>
-          <Grid item xs={2} container></Grid>
+          {/* {index == 2 ? (
+          <Grid item xs={3}></Grid>
+        ) : (
+          <Grid item xs={3} className={classes.logoContainer}>
+            <img src={item.logo} alt="fedex" className={classes.media} />
+          </Grid>
+        )} */}
         </Grid>
       ))}
     </>

@@ -124,7 +124,7 @@ const Landing: React.FC = () => {
 
   return (
     <Grid container className={classes.root} xs={12}>
-      <Typography variant="h1" className={classes.landingTitle}>
+      <Typography variant="h1" className={classes.visionTitle}>
         {homeContent.titleSection.heading}
       </Typography>
       <Typography variant="h2" className={classes.landingSubtitle}>
