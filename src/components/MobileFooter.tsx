@@ -68,13 +68,31 @@ const App: React.FC = () => {
           FOLLOW US ON
         </Typography>
         <Box display={"div"} style={{ textAlign: "right", margin: "10px 0" }}>
-          <Link href="#" color="inherit" style={{ margin: "0 5px" }}>
+          <Link
+            href="https://www.linkedin.com/company/fedex-center-iitm"
+            color="inherit"
+            style={{ margin: "0 5px" }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <LinkedInIcon />
           </Link>
-          <Link href="#" color="inherit" style={{ margin: "0 5px" }}>
+          <Link
+            href="https://twitter.com/fedexiitm14725"
+            color="inherit"
+            style={{ margin: "0 5px" }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <XIcon />
           </Link>
-          <Link href="#" color="inherit" style={{ margin: "0 5px" }}>
+          <Link
+            href="https://www.youtube.com/@FedExCentreIITM"
+            color="inherit"
+            style={{ margin: "0 5px" }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <YouTubeIcon />
           </Link>
         </Box>

@@ -73,6 +73,8 @@ const App: React.FC = () => {
             href="https://www.linkedin.com/company/fedex-center-iitm"
             color="inherit"
             style={{ margin: "0 5px" }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <LinkedInIcon />
           </Link>
@@ -80,6 +82,8 @@ const App: React.FC = () => {
             href="https://twitter.com/fedexiitm14725"
             color="inherit"
             style={{ margin: "0 5px" }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <XIcon />
           </Link>
@@ -87,6 +91,8 @@ const App: React.FC = () => {
             href="https://www.youtube.com/@FedExCentreIITM"
             color="inherit"
             style={{ margin: "0 5px" }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <YouTubeIcon />
           </Link>

@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme: Theme) =>
       // maxWidth: "50%",
     },
     medialogo: {
-      width: "300px",
-      height: "100px",
+      // width: "110px",
+      height: "50px",
       marginTop: "40px",
     },
     firstCont: {
@@ -117,7 +117,7 @@ export default function People() {
             <Typography className={classes.subtitle}>
               A Collaboration of IITM & FedEx
             </Typography>
-            <Grid container item xs={8} spacing={2}>
+            <Grid container item xs={6} spacing={1}>
               <Grid item xs={5}>
                 <img
                   className={classes.medialogo}
@@ -125,7 +125,7 @@ export default function People() {
                   alt="fedex"
                 ></img>
               </Grid>
-              <Grid item xs={2}></Grid>
+              {/* <Grid item xs={1}></Grid> */}
               <Grid item xs={5}>
                 <img
                   className={classes.medialogo}
@@ -137,7 +137,11 @@ export default function People() {
           </Grid>
         </Grid>
       </Box>
-      <Box className={classes.sectionTitle}>Governing Board</Box>
+      <Box>
+        <Typography className={classes.sectionTitle}>
+          Governing Board
+        </Typography>
+      </Box>
 
       <Box className={classes.firstCont}>
         <Grid container className={classes.root}>
@@ -159,7 +163,9 @@ export default function People() {
           ))}
         </Grid>
       </Box>
-      <Box className={classes.sectionTitle}>Faculty</Box>
+      <Box>
+        <Typography className={classes.sectionTitle}>Faculty</Typography>
+      </Box>
 
       <Grid container className={classes.root}>
         {facultyData.map((item, index) => (

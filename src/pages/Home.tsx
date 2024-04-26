@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 400,
       fontSize: "5rem",
       lineHeight: "6.7rem",
-      textAlign: "left",
+      textAlign: "center",
     },
     landingSubtitle: {
       marginBottom: theme.spacing(5),
@@ -129,11 +129,11 @@ const Landing: React.FC = () => {
     <Grid container className={classes.root} xs={12}>
       <Box className={classes.visionTitle}>
         <Typography variant="h1" className={classes.visiontext}>
-          FedEx
+          FedEx Centre for
         </Typography>
-        <Typography variant="h1" className={classes.visiontext}>
-          Centre for
-        </Typography>
+        {/* <Typography variant="h1" className={classes.visiontext}>
+          
+        </Typography> */}
         <Typography variant="h1" className={classes.visiontext}>
           Smart Sustainable Supply Chains
         </Typography>
