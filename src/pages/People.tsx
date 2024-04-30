@@ -1,31 +1,56 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Box } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { peopleData, facultyData } from "../assets/textData/people";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    titlepic: {
+      width: "100%",
+      height: "500px",
+      marginBottom: "30px",
+    },
+    subCont: {
+      // border: "2px solid",
+      // maxWidth: "50%",
+    },
+    medialogo: {
+      // width: "110px",
+      height: "50px",
+      marginTop: "40px",
+    },
+    firstCont: {
+      borderBottom: "2px solid",
+      paddingBottom: "20px",
+    },
     media: {
       width: "100%",
+      marginTop: theme.spacing(2),
+      height: "400px",
     },
     arrowImage: {
       width: "8rem",
     },
     root: {
       paddingLeft: "0.7rem",
+      paddingRight: "0.7rem",
+      // maxHeight: "450px",
     },
     title: {
-      fontWeight: 400,
-      fontSize: "6.6rem",
+      fontWeight: 500,
+      fontSize: "5rem",
       lineHeight: "6.6rem",
     },
     sectionTitle: {
-      fontSize: "6rem",
+      fontSize: "4rem",
       lineHeight: "6rem",
       margin: theme.spacing(2),
-      fontWeight: 400,
+      fontWeight: 700,
+      display: "flex",
+      justifyContent: "center",
     },
     subtitle: {
       marginTop: theme.spacing(2),
-      fontSize: "3rem",
+      fontSize: "2.4rem",
       lineHeight: "3rem",
       marginBottom: theme.spacing(2),
       fontWeight: 400,
@@ -40,9 +65,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     nameContainer: {
       padding: theme.spacing(5),
-      borderRight: "0.1rem solid",
-      borderLeft: "0.1rem solid",
-      borderTop: "0.1rem solid",
+      // borderRight: "0.1rem solid",
+      // borderLeft: "0.1rem solid",
+      // borderTop: "0.1rem solid",
     },
     nameContainerLeft: {
       padding: theme.spacing(5, 2),
@@ -50,245 +75,114 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     logoContainer: {
       padding: theme.spacing(5),
-      borderTop: "0.1rem solid",
+      // borderTop: "0.1rem solid",
     },
   })
 );
 
-const peopleData = [
-  {
-    left: {
-      name: "Nitin Tatiwala",
-      designation: "Vice President, Amea Marketing at FedEx",
-      image: "https://social-hero.s3.ap-south-1.amazonaws.com/People/nitin.png",
-    },
-    right: {
-      name: "Kami Vishwanathan",
-      designation:
-        "President - Middle East, Indian Subcontinent and Africa at FedEx",
-      image: "https://social-hero.s3.ap-south-1.amazonaws.com/People/kami.jpeg",
-    },
-    logo: "https://social-hero.s3.ap-south-1.amazonaws.com/logo/fedex-logo.png",
-  },
-  {
-    right: {
-      name: "Dr. N.S. Narayanaswamy",
-      designation: "Computer Science Department, IIT Madras",
-      image: "https://social-hero.s3.ap-south-1.amazonaws.com/People/swamy.jpg",
-    },
-    left: {
-      name: "Dr. Arshinder Kaur",
-      designation: "Management Studies Department, IIT Madras",
-      image:
-        "https://social-hero.s3.ap-south-1.amazonaws.com/People/ArshinderKaur.jpg",
-    },
-    logo: "https://social-hero.s3.ap-south-1.amazonaws.com/logo/iitmlogo.png",
-  },
-  {
-    left: {
-      name: "Mahesh Panchagnula",
-      designation: "Dean ACR, IIT Madras",
-      image:
-        "https://social-hero.s3.ap-south-1.amazonaws.com/People/maheshP.jpg",
-    },
-    right: {
-      name: "V. Kamakoti",
-      designation: "Director, IIT Madras",
-      image: "https://social-hero.s3.ap-south-1.amazonaws.com/People/kama.jpg",
-    },
-    logo: "https://social-hero.s3.ap-south-1.amazonaws.com/logo/iitmlogo.png",
-  },
-];
-
-const facultyData = [
-  {
-    left: {
-      name: "Dr. Arshinder Kaur",
-      designation: "Management Studies - Supply Chain Sustainability",
-      image:
-        "https://social-hero.s3.ap-south-1.amazonaws.com/People/ArshinderKaur.jpg",
-    },
-    right: {
-      name: "Dr. Chandrasekharan Rajendran",
-      designation: "Management Studies - Supply Chain Sustainability",
-      image:
-        "https://social-hero.s3.ap-south-1.amazonaws.com/People/Rajendran.jpg",
-    },
-    logo: "https://social-hero.s3.ap-south-1.amazonaws.com/logo/iitmlogo.png",
-  },
-  {
-    left: {
-      name: "Dr. Babji Srinivasan",
-      designation: "Applied Mechanics - Logistics Worker Wellness",
-      image:
-        "https://social-hero.s3.ap-south-1.amazonaws.com/People/babjiSrinivasan.jpg",
-    },
-    right: {
-      name: "Dr. Rajagopalan Srinivasan",
-      designation: "Chemical Engineering - Logistics Worker Wellness",
-      image:
-        "https://social-hero.s3.ap-south-1.amazonaws.com/People/Rajagopalan.jpg",
-    },
-    logo: "https://social-hero.s3.ap-south-1.amazonaws.com/logo/iitmlogo.png",
-  },
-  {
-    left: {
-      name: "Dr. B. Ravindran",
-      designation: "Computer Science - Algorithms and ML",
-      image: "https://social-hero.s3.ap-south-1.amazonaws.com/People/ravi.jpg",
-    },
-    right: {
-      name: "Dr. N.S. Narayanaswamy",
-      designation: "Computer Science - Algorithms and ML",
-      image: "https://social-hero.s3.ap-south-1.amazonaws.com/People/swamy.jpg",
-    },
-    logo: "https://social-hero.s3.ap-south-1.amazonaws.com/logo/iitmlogo.png",
-  },
-  {
-    left: {
-      name: "Dr. Gitakrishnan Ramadurai",
-      designation: "Civil Engineering - Logistics Infrastructure",
-      image:
-        "https://social-hero.s3.ap-south-1.amazonaws.com/People/Ramadurai.jpg",
-    },
-    right: {
-      name: "Satya R Chakravarthy",
-      designation: "Aerospace Engineering - Logistics Infrastructure",
-      image:
-        "https://social-hero.s3.ap-south-1.amazonaws.com/People/Chakravarthy.jpg",
-    },
-    logo: "https://social-hero.s3.ap-south-1.amazonaws.com/logo/iitmlogo.png",
-  },
-];
-
 export default function People() {
   const classes = useStyles();
 
-  const RightArrow = () => (
-    <img
-      src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowRight.png"
-      alt="right-arrow"
-      className={classes.arrowImage}
-    />
-  );
+  // const RightArrow = () => (
+  //   <img
+  //     src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowRight.png"
+  //     alt="right-arrow"
+  //     className={classes.arrowImage}
+  //   />
+  // );
 
-  const LeftArrow = () => (
-    <img
-      src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowLeft.png"
-      alt="left-arrow"
-      className={classes.arrowImage}
-    />
-  );
+  // const LeftArrow = () => (
+  //   <img
+  //     src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/ArrowLeft.png"
+  //     alt="left-arrow"
+  //     className={classes.arrowImage}
+  //   />
+  // );
 
   return (
     <>
+      <Box className={classes.firstCont}>
+        <Grid container className={classes.root}>
+          <Grid item xs={4}>
+            <img
+              className={classes.titlepic}
+              src="https://social-hero.s3.ap-south-1.amazonaws.com/People/people-start.png"
+              alt="people"
+            />
+          </Grid>
+          <Grid item className={classes.rightContainer} xs={8}>
+            <Typography className={classes.title}>
+              Our talented team that made it possible
+            </Typography>
+            <Typography className={classes.subtitle}>
+              A Collaboration of IITM & FedEx
+            </Typography>
+            <Grid container item xs={6} spacing={1}>
+              <Grid item xs={5}>
+                <img
+                  className={classes.medialogo}
+                  src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/fedex-logo.png"
+                  alt="fedex"
+                ></img>
+              </Grid>
+              {/* <Grid item xs={1}></Grid> */}
+              <Grid item xs={5}>
+                <img
+                  className={classes.medialogo}
+                  src="https://social-hero.s3.ap-south-1.amazonaws.com/logo/iitmlogo.png"
+                  alt="iitmlogo"
+                ></img>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box>
+        <Typography className={classes.sectionTitle}>
+          Governing Board
+        </Typography>
+      </Box>
+
+      <Box className={classes.firstCont}>
+        <Grid container className={classes.root}>
+          {peopleData.map((item, index) => (
+            // <Grid container item  key={index}>
+            <Grid container item className={classes.subCont} xs={6} key={index}>
+              <Grid item xs={6}>
+                <img className={classes.media} src={item.image} alt="people" />
+              </Grid>
+              <Grid item className={classes.nameContainer} xs={6}>
+                <Typography className={classes.subtitle}>
+                  {item.name}
+                </Typography>
+                <Typography className={classes.sideText}>
+                  {item.designation}
+                </Typography>
+              </Grid>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+      <Box>
+        <Typography className={classes.sectionTitle}>Faculty</Typography>
+      </Box>
+
       <Grid container className={classes.root}>
-        <Grid item xs={4}>
-          <img
-            className={classes.media}
-            src="https://social-hero.s3.ap-south-1.amazonaws.com/People/people-start.png"
-            alt="people"
-          />
-        </Grid>
-        <Grid item className={classes.rightContainer} xs={8}>
-          <Typography className={classes.title}>
-            Our talented team that made it possible
-          </Typography>
-          <Typography className={classes.subtitle}>
-            A Collaboration of IITM & FedEx
-          </Typography>
-        </Grid>
+        {facultyData.map((item, index) => (
+          // <Grid container className={classes.root} key={index}>
+          <Grid container xs={6} key={index}>
+            <Grid item xs={6}>
+              <img className={classes.media} src={item.image} alt="people" />
+            </Grid>
+            <Grid item className={classes.nameContainer} xs={6}>
+              <Typography className={classes.subtitle}>{item.name}</Typography>
+              <Typography className={classes.sideText}>
+                {item.designation}
+              </Typography>
+            </Grid>
+          </Grid>
+        ))}
       </Grid>
-      <Typography className={classes.sectionTitle}>Governing Board</Typography>
-      {peopleData.map((item, index) => (
-        <Grid item container className={classes.root} key={index}>
-          <Grid container item xs={6}>
-            <Grid item xs={12}>
-              <img
-                className={classes.media}
-                src={item.left.image}
-                alt="people"
-              />
-            </Grid>
-            <Grid item xs={5}></Grid>
-            <Grid item className={classes.nameContainerLeft} xs={7}>
-              <Typography className={classes.subtitle}>
-                {item.right.name}
-              </Typography>
-              <Typography className={classes.sideText}>
-                {item.right.designation}
-              </Typography>
-              <RightArrow />
-            </Grid>
-          </Grid>
-          <Grid item xs={6} container>
-            <Grid item className={classes.nameContainer} xs={6}>
-              <Typography className={classes.subtitle}>
-                {item.left.name}
-              </Typography>
-              <Typography className={classes.sideText}>
-                {item.left.designation}
-              </Typography>
-              <LeftArrow />
-            </Grid>
-            <Grid item xs={6} className={classes.logoContainer}>
-              <img src={item.logo} alt="fedex" className={classes.media} />
-            </Grid>
-            <Grid item xs={12}>
-              <img
-                className={classes.media}
-                src={item.right.image}
-                alt="people"
-              />
-            </Grid>
-          </Grid>
-        </Grid>
-      ))}
-      <Typography className={classes.sectionTitle}>Faculty</Typography>
-      {facultyData.map((item, index) => (
-        <Grid item container className={classes.root} key={index}>
-          <Grid container item xs={6}>
-            <Grid item xs={12}>
-              <img
-                className={classes.media}
-                src={item.left.image}
-                alt="people"
-              />
-            </Grid>
-            <Grid item xs={5}></Grid>
-            <Grid item className={classes.nameContainerLeft} xs={7}>
-              <Typography className={classes.subtitle}>
-                {item.right.name}
-              </Typography>
-              <Typography className={classes.sideText}>
-                {item.right.designation}
-              </Typography>
-              <RightArrow />
-            </Grid>
-          </Grid>
-          <Grid item xs={6} container>
-            <Grid item className={classes.nameContainer} xs={6}>
-              <Typography className={classes.subtitle}>
-                {item.left.name}
-              </Typography>
-              <Typography className={classes.sideText}>
-                {item.left.designation}
-              </Typography>
-              <LeftArrow />
-            </Grid>
-            <Grid item xs={6} className={classes.logoContainer}>
-              <img src={item.logo} alt="fedex" className={classes.media} />
-            </Grid>
-            <Grid item xs={12}>
-              <img
-                className={classes.media}
-                src={item.right.image}
-                alt="people"
-              />
-            </Grid>
-          </Grid>
-        </Grid>
-      ))}
     </>
   );
 }

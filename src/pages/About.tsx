@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       fontWeight: 400,
-      fontSize: "6.6rem",
-      lineHeight: "6.6rem",
+      fontSize: "4rem",
+      lineHeight: "4rem",
     },
     titleContainer: {
       paddingTop: theme.spacing(5),
@@ -47,16 +47,17 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "100%",
       flexDirection: "column",
       alignItems: "flex-end",
+      paddingTop: "20px",
     },
     leftAlignText: {
-      width: "23%",
+      width: "100%",
     },
     secondContainer: {
       borderTop: "1px solid",
       paddingBottom: theme.spacing(4),
     },
     sideText: {
-      fontSize: "1.2rem",
+      fontSize: "1.5rem",
     },
   })
 );
